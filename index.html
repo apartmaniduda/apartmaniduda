@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="stylesheet" href="apartman.css"> -->
+    <!-- <script src="apartman.js"></script> -->
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f1F8eC;
+            font-family: Verdana, sans-serif;
+
+        }
+
+        .apartmentLinks {
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .image {
+            width: 40vw;
+            max-height: 30vh;
+            object-fit: cover;
+            border-radius: 10px;
+            border: white solid 2px
+        }
+
+        .caption {
+            font-size: 32px
+        }
+
+        .imageWithCaption {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .pricing {
+            border: white solid 2px;
+            background-color: white;
+            color: gray;
+            font-size: 24px;
+            padding: 0 20px 0 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .title {
+            font-size: 72px;
+            color: #555;
+            text-align: center;
+        }
+
+        @media only screen and (max-height: 600px),
+        screen and (max-width: 600px) {
+            .title {
+                font-size: 32px;
+            }
+
+            .pricing {
+                font-size: 12px;
+            }
+
+            .caption {
+                font-size: 18px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <span>
+            Apartmani Duda
+        </span>
+    </div>
+    <div class="apartmentLinks">
+        <a href="prednji.html" class="imageWithCaption">
+            <img src="images/prednji/16.jpg" class="image" />
+            <span class="caption">
+                Prednji apartman
+            </span>
+        </a>
+        <a href="potkrovlje.html" class="imageWithCaption">
+            <img src="images/potkrovlje/11.jpg" class="image" />
+            <span class="caption">
+                Potkrovlje
+            </span>
+        </a>
+    </div>
+    <div class="pricing">
+        <p>
+            50€ noć (do 15.6 i od 15.9) - Predsezona i Podsezona
+        </p>
+        <p>
+            63€ noć (od 15.6 do 15.9) - Sezona
+        </p>
+        <p>
+            Kontakt: +38599123123
+        </p>
+    </div>
+</body>
+
+</html>
