@@ -7,21 +7,23 @@
     <!-- <script src="apartman.js"></script> -->
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 100vh;
             margin: 0;
             background-color: #f1F8eC;
-            font-family: Verdana, sans-serif;
+        }
 
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 25px;
+            font-family: Verdana, sans-serif;
+            gap: 75px;
         }
 
         .apartmentLinks {
             display: flex;
             flex-direction: row;
-            gap: 25px;
+            gap: 75px;
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -30,10 +32,10 @@
 
         .image {
             width: 40vw;
-            max-height: 30vh;
-            object-fit: cover;
             border-radius: 10px;
-            border: white solid 2px
+            border: white solid 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
         }
 
         .caption {
@@ -75,8 +77,31 @@
             text-align: center;
         }
 
+        @media only screen and (max-width: 600px) {
+            .content {
+                height: 100dvh;
+                justify-content: space-evenly;
+                gap: 0px;
+            }
+        }
+
+        @media only screen and (max-height: 600px) {
+            .content {
+                gap: 0px;
+            }
+
+            .image {
+                max-width: 60dvh;
+            }
+        }
+
         @media only screen and (max-height: 600px),
         screen and (max-width: 600px) {
+
+            .apartmentLinks {
+                gap: 25px;
+            }
+
             .title {
                 font-size: 32px;
             }
@@ -94,41 +119,42 @@
 </head>
 
 <body>
-    <div class="title">
-        <span>
-            Apartmani Duda
-        </span>
-    </div>
-    <div class="apartmentLinks">
-        <a href="prednji.html" class="imageWithCaption">
-            <img src="images/prednji/16.jpg" class="image" />
-            <span class="caption">
-                Prednji apartman
+    <div class='content'>
+        <div class="title">
+            <span>
+                Apartmani Duda
             </span>
-        </a>
-        <a href="potkrovlje.html" class="imageWithCaption">
-            <img src="images/potkrovlje/11.jpg" class="image" />
-            <span class="caption">
-                Potkrovlje
-            </span>
-        </a>
-    </div>
-    <div class="pricing">
-        <p>
-            50€ noć (do 15.6 i od 15.9) - Predsezona i Podsezona
-        </p>
-        <p>
-            63€ noć (od 15.6 do 15.9) - Sezona
-        </p>
-        <p>
-            Kontakt: +385-91-594-0957
-        </p>
-        <p>
-            Zdrače 39b
-            Otok Murter, Betina
-            22244
-        </p>
-
+        </div>
+        <div class=" apartmentLinks">
+            <a href="prednji.html" class="imageWithCaption">
+                <img src="images/prednji/16.jpg" class="image" />
+                <span class="caption">
+                    Prednji apartman
+                </span>
+            </a>
+            <a href="potkrovlje.html" class="imageWithCaption">
+                <img src="images/potkrovlje/11.jpg" class="image" />
+                <span class="caption">
+                    Potkrovlje
+                </span>
+            </a>
+        </div>
+        <div class="pricing">
+            <p>
+                50€ noć (do 15.6 i od 15.9) - Predsezona i Podsezona
+            </p>
+            <p>
+                63€ noć (od 15.6 do 15.9) - Sezona
+            </p>
+            <p>
+                Kontakt: +385-91-594-0957 - SMS, WhatsApp, Telefonski
+            </p>
+            <p>
+                Zdrače 39b
+                Otok Murter, Betina
+                22244
+            </p>
+        </div>
 
     </div>
 </body>
